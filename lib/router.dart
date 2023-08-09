@@ -6,6 +6,7 @@ import 'package:whatsapp_ui/features/auth/screen/user_information_screen.dart';
 
 import 'common/widgets/error.dart';
 import 'features/auth/screen/login_screen.dart';
+import 'features/select_contacts/screens/select_contacts_screens.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings){
 
@@ -23,6 +24,11 @@ Route<dynamic> generateRoute(RouteSettings settings){
       );
     case UserInformationScreen.routeName:
       return MaterialPageRoute(builder: (context)=>  UserInformationScreen(
+      ),
+      );
+
+    case SelectContactsScreen.routeName:
+      return MaterialPageRoute(builder: (context)=>  const SelectContactsScreen(
       ),
       );
     default:

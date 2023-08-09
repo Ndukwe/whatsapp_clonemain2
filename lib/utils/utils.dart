@@ -1,5 +1,5 @@
 
-
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -9,19 +9,19 @@ ScaffoldMessenger.of(context).showSnackBar(
   ,),
 );
 
-/*Future<File?> pickImageFromGallery(BuildContext context) async{
-  File? image;
+}
+Future<XFile?> pickImageFromGallery(BuildContext context) async{
+  XFile? image;
   try{
     final pickedImage=
     await ImagePicker().pickImage(source: ImageSource.gallery);
     if(pickedImage != null){
-      //image=File(pickedImage.path);
+      image=XFile(pickedImage.path);
     }
   }catch(e){
-   showSnackBar(context: context, content: e.toString());
+    showSnackBar(context: context, content: e.toString());
   }
-return image;
-}*/
-
-
+  return image;
 }
+
+
