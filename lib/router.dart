@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/features/auth/screen/otp_screen.dart';
 import 'package:whatsapp_ui/features/auth/screen/user_information_screen.dart';
+import 'package:whatsapp_ui/screens/mobile_chat_screen.dart';
 
 import 'common/widgets/error.dart';
 import 'features/auth/screen/login_screen.dart';
@@ -29,6 +30,15 @@ Route<dynamic> generateRoute(RouteSettings settings){
 
     case SelectContactsScreen.routeName:
       return MaterialPageRoute(builder: (context)=>  const SelectContactsScreen(
+      ),
+      );
+
+    case MobileChatScreen.routeName:
+      final arguments=settings.arguments as Map<String,dynamic>;
+      final name=arguments['name'];
+      final uid=arguments['uid'];
+
+      return MaterialPageRoute(builder: (context)=>   MobileChatScreen(name: name, uid: uid,
       ),
       );
     default:
