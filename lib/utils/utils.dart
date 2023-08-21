@@ -24,4 +24,18 @@ Future<XFile?> pickImageFromGallery(BuildContext context) async{
   return image;
 }
 
+Future<XFile?> pickVideoFromGallery(BuildContext context) async{
+  XFile? video;
+  try{
+    final pickedVideo=
+    await ImagePicker().pickVideo(source: ImageSource.gallery);
+    if(pickedVideo != null){
+      video=XFile(pickedVideo.path);
+    }
+  }catch(e){
+    showSnackBar(context: context, content: e.toString());
+  }
+  return video;
+}
+
 
