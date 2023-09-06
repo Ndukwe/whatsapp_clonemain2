@@ -23,7 +23,7 @@ class LandingScreen extends StatelessWidget {
 
             children: [
               const SizedBox(height: 50,),
-              const Text('Welcome To Whatsapp',style: TextStyle(
+              const Text('Welcome To 1Howz',style: TextStyle(
                 fontSize: 33,
                 fontWeight: FontWeight.w600
               ),),
@@ -37,9 +37,13 @@ class LandingScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Expanded(
-                child: SizedBox(
-                    width: size.width*0.75,
-                    child: CustomButton(text:'AGREE AND CONTINUE',onPressed:()=>navigateToLoginScreen(context))),
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: SizedBox(
+                      width: size.width*0.75,
+                      height: 1.0,
+                      child: CustomButton(text:'AGREE AND CONTINUE',onPressed:()=>navigateToLoginScreen(context))),
+                ),
               )
             ],
           ),

@@ -48,7 +48,16 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>NSContactsUsageDescription</key>
-        <string>Contact list to chat</string>
+    <string>Contact list to chat</string>
+    <key>NSCameraUsageDescription</key>
+        <string>Camera Library Use</string>
+    <key>NSAppleMusicUsageDescription</key>
+     <string>Needs to hear music/recorded</string>
+        <array>
+               <string>audio</string>
+       </array>
+       <key>NSMicrophoneUsageDescription</key>
+       <string>Mic Use</string>
     </dict>
     </plist>
 </dict>

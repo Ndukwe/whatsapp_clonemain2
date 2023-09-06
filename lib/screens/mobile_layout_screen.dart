@@ -58,7 +58,7 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen> with Wi
           backgroundColor: appBarColor,
           centerTitle: false,
           title: const Text(
-            'ObuChat',
+            '🛖 Hut',
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,

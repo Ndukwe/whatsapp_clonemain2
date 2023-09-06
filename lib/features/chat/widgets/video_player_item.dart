@@ -41,16 +41,19 @@ class _VideoPlayerItemState extends State<VideoPlayerItem> {
           CachedVideoPlayer(videoPlayerController),
         Align(
           alignment: Alignment.center,
-          child: IconButton(onPressed: (){
+          child: IconButton(
+            onPressed: (){
             if(isPlay){
               videoPlayerController.pause();
             }else{
               videoPlayerController.play();
-
             }
+            setState(() {
+              isPlay=!isPlay;
+            });
           },
-            icon:  Icon(
-              isPlay?Icons.pause_circle:Icons.play_circle,),),
+            icon:  Icon(isPlay?Icons.pause_circle:Icons.play_circle,),
+          ),
         )
       ],
     ),
